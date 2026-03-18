@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Green Tech Hub - Nền tảng kết nối các giải pháp công nghệ xanh bảo vệ môi trường. Khám phá Solar Energy, Waste Management, Smart Irrigation.">
+    <meta name="keywords" content="green tech, công nghệ xanh, năng lượng mặt trời, quản lý rác thải, tưới tiêu thông minh">
+    <meta name="author" content="Trịnh Đoàn Quang Huy">
+    <title>Green Tech Hub - Technology for a Greener Future</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#" id="navBrand">
+                <span class="brand-icon">🌿</span>
+                <span>Green Tech Hub</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero" id="navHome">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#solutions" id="navSolutions">Giải pháp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" id="navAbout">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" id="navContact">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <!-- Badge -->
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Nền tảng Công nghệ Xanh hàng đầu
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="hero-title">
+                        Technology for a <span class="highlight">Greener Future</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="hero-description">
+                        Kết nối các giải pháp công nghệ tiên tiến để bảo vệ môi trường. 
+                        Cùng nhau xây dựng một tương lai xanh và bền vững cho thế hệ mai sau.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-buttons">
+                        <a href="#solutions" class="btn btn-primary-custom" id="btnExplore">
+                            <i class="bi bi-lightning-charge me-2"></i>Khám phá Giải pháp
+                        </a>
+                        <a href="#contact" class="btn btn-outline-custom" id="btnContact">
+                            <i class="bi bi-envelope me-2"></i>Liên hệ Đối tác
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Dự án Xanh</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Đối tác</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30%</div>
+                            <div class="stat-label">Giảm CO₂</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop" 
+                             alt="Green Technology - Năng lượng tái tạo" 
+                             id="heroImage"
+                             loading="eager">
+                    </div>
+
+                    <!-- Floating Cards -->
+                    <div class="floating-card card-1">
+                        <span class="card-icon">☀️</span>
+                        <div>
+                            <div class="card-text">Năng lượng sạch</div>
+                            <div class="card-value">+85% hiệu suất</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <span class="card-icon">🌱</span>
+                        <div>
+                            <div class="card-text">Carbon Offset</div>
+                            <div class="card-value">12,000 tấn/năm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SOLUTIONS SECTION ============ -->
+    <section class="solutions-section section-padding" id="solutions">
+        <div class="container">
+            <h2 class="section-title fade-in-section">Giải Pháp Công Nghệ Xanh</h2>
+            <p class="section-subtitle fade-in-section">
+                Khám phá các giải pháp tiên tiến giúp bảo vệ hành tinh và tối ưu hóa tài nguyên tự nhiên
+            </p>
+
+            <div class="row g-4">
+                <!-- Solution 1: Solar Energy -->
+                <div class="col-lg-4 col-md-6 fade-in-section">
+                    <div class="solution-card" id="cardSolar">
+                        <div class="solution-icon">☀️</div>
+                        <h3>Solar Energy</h3>
+                        <p>Hệ thống năng lượng mặt trời thông minh với công nghệ AI tối ưu hóa hiệu suất thu năng lượng lên đến 95%.</p>
+                        <ul class="solution-features">
+                            <li>Tấm pin năng lượng thế hệ mới</li>
+                            <li>Hệ thống theo dõi mặt trời tự động</li>
+                            <li>Lưu trữ năng lượng thông minh</li>
+                            <li>Giám sát hiệu suất real-time</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solution 2: Waste Management -->
+                <div class="col-lg-4 col-md-6 fade-in-section">
+                    <div class="solution-card" id="cardWaste">
+                        <div class="solution-icon">♻️</div>
+                        <h3>Waste Management</h3>
+                        <p>Giải pháp quản lý rác thải toàn diện sử dụng IoT và Machine Learning để phân loại và xử lý tự động.</p>
+                        <ul class="solution-features">
+                            <li>Phân loại rác tự động bằng AI</li>
+                            <li>Thùng rác thông minh IoT</li>
+                            <li>Tối ưu tuyến thu gom</li>
+                            <li>Chuyển đổi rác thành năng lượng</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solution 3: Smart Irrigation -->
+                <div class="col-lg-4 col-md-6 fade-in-section">
+                    <div class="solution-card" id="cardIrrigation">
+                        <div class="solution-icon">💧</div>
+                        <h3>Smart Irrigation</h3>
+                        <p>Hệ thống tưới tiêu thông minh với cảm biến IoT và dữ liệu thời tiết, tiết kiệm đến 60% lượng nước.</p>
+                        <ul class="solution-features">
+                            <li>Cảm biến độ ẩm đất chính xác</li>
+                            <li>Tưới tự động theo lịch trình</li>
+                            <li>Dự báo thời tiết tích hợp</li>
+                            <li>Dashboard quản lý từ xa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-in-section">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=450&fit=crop" 
+                             alt="Green Tech Hub Team" 
+                             class="img-fluid"
+                             id="aboutImage"
+                             loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-content fade-in-section">
+                    <h2>Về <span style="color: var(--primary-green);">Green Tech Hub</span></h2>
+                    <p>
+                        Chúng tôi là nền tảng kết nối các doanh nghiệp, nhà nghiên cứu và nhà đầu tư 
+                        trong lĩnh vực công nghệ xanh. Sứ mệnh của chúng tôi là thúc đẩy sự phát triển 
+                        bền vững thông qua đổi mới công nghệ.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <div class="about-feature-icon">🎯</div>
+                            <div class="about-feature-text">
+                                <h4>Sứ mệnh Xanh</h4>
+                                <p>Xây dựng hệ sinh thái công nghệ bảo vệ môi trường bền vững</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <div class="about-feature-icon">🤝</div>
+                            <div class="about-feature-text">
+                                <h4>Kết nối Đối tác</h4>
+                                <p>Liên kết các bên liên quan để tối đa hóa tác động tích cực</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <div class="about-feature-icon">🚀</div>
+                            <div class="about-feature-text">
+                                <h4>Đổi mới Sáng tạo</h4>
+                                <p>Ứng dụng AI, IoT và Big Data vào giải pháp môi trường</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in-section">Liên Hệ Đối Tác</h2>
+            <p class="section-subtitle fade-in-section">
+                Hãy để lại thông tin để chúng tôi tư vấn giải pháp công nghệ xanh phù hợp nhất cho bạn
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10 fade-in-section">
+                    <div class="contact-wrapper">
+                        <div class="row g-4">
+                            <!-- Contact Info -->
+                            <div class="col-lg-5">
+                                <div class="contact-info">
+                                    <h3>Thông tin liên hệ</h3>
+                                    <p>Đội ngũ tư vấn của chúng tôi sẵn sàng hỗ trợ bạn 24/7.</p>
+
+                                    <div class="contact-detail">
+                                        <div class="contact-detail-icon">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <div class="contact-detail-text">
+                                            <strong>Địa chỉ</strong>
+                                            Quận 7, TP. Hồ Chí Minh, Việt Nam
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-detail">
+                                        <div class="contact-detail-icon">
+                                            <i class="bi bi-envelope"></i>
+                                        </div>
+                                        <div class="contact-detail-text">
+                                            <strong>Email</strong>
+                                            contact@greentechhub.vn
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-detail">
+                                        <div class="contact-detail-icon">
+                                            <i class="bi bi-telephone"></i>
+                                        </div>
+                                        <div class="contact-detail-text">
+                                            <strong>Điện thoại</strong>
+                                            +84 28 1234 5678
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-detail">
+                                        <div class="contact-detail-icon">
+                                            <i class="bi bi-clock"></i>
+                                        </div>
+                                        <div class="contact-detail-text">
+                                            <strong>Giờ làm việc</strong>
+                                            Thứ 2 - Thứ 6: 8:00 - 17:30
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Form -->
+                            <div class="col-lg-7">
+                                <form class="contact-form" id="contactForm" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputName" class="form-label">Họ và tên <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="inputName" 
+                                                   placeholder="Nhập họ và tên" required
+                                                   minlength="2" maxlength="100">
+                                            <div class="invalid-feedback" id="nameError">Vui lòng nhập họ và tên (ít nhất 2 ký tự)</div>
+                                            <div class="valid-feedback">Hợp lệ!</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputEmail" class="form-label">Email <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="inputEmail" 
+                                                   placeholder="example@email.com" required>
+                                            <div class="invalid-feedback" id="emailError">Vui lòng nhập đúng định dạng email</div>
+                                            <div class="valid-feedback">Hợp lệ!</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPhone" class="form-label">Số điện thoại</label>
+                                            <input type="tel" class="form-control" id="inputPhone" 
+                                                   placeholder="0912 345 678">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputCompany" class="form-label">Công ty / Tổ chức</label>
+                                            <input type="text" class="form-control" id="inputCompany" 
+                                                   placeholder="Tên công ty">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputSubject" class="form-label">Chủ đề quan tâm <span class="text-danger">*</span></label>
+                                            <select class="form-select" id="inputSubject" required>
+                                                <option value="" selected disabled>-- Chọn giải pháp quan tâm --</option>
+                                                <option value="solar">☀️ Solar Energy - Năng lượng mặt trời</option>
+                                                <option value="waste">♻️ Waste Management - Quản lý rác thải</option>
+                                                <option value="irrigation">💧 Smart Irrigation - Tưới tiêu thông minh</option>
+                                                <option value="other">🔧 Khác</option>
+                                            </select>
+                                            <div class="invalid-feedback" id="subjectError">Vui lòng chọn chủ đề quan tâm</div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputMessage" class="form-label">Lời nhắn <span class="text-danger">*</span></label>
+                                            <textarea class="form-control" id="inputMessage" rows="4" 
+                                                      placeholder="Chia sẻ nhu cầu của bạn..." required
+                                                      minlength="10" maxlength="1000"></textarea>
+                                            <div class="invalid-feedback" id="messageError">Vui lòng nhập lời nhắn (ít nhất 10 ký tự)</div>
+                                            <div class="valid-feedback">Hợp lệ!</div>
+                                            <small class="d-block text-end mt-1" id="messageCharCount" style="color: var(--text-muted); font-size: 0.8rem;">0 / 1000 ký tự</small>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary-custom w-100" id="btnSubmit">
+                                                <i class="bi bi-send me-2"></i>Gửi Thông Tin Liên Hệ
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Success Alert -->
+                                    <div class="form-alert" id="formSuccess">
+                                        <span class="alert-icon">✅</span>
+                                        <span>Cảm ơn bạn! Thông tin đã được gửi thành công. Chúng tôi sẽ phản hồi trong 24 giờ.</span>
+                                    </div>
+
+                                    <!-- Error Alert -->
+                                    <div class="form-alert" id="formError">
+                                        <span class="alert-icon">❌</span>
+                                        <span>Có lỗi xảy ra. Vui lòng kiểm tra lại thông tin và thử lại.</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <span>🌿</span>
+                        <span>Green Tech Hub</span>
+                    </div>
+                    <p class="footer-description">
+                        Nền tảng kết nối các giải pháp công nghệ xanh, 
+                        hướng tới một tương lai bền vững và thân thiện với môi trường.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" id="socialFacebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter" id="socialTwitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn" id="socialLinkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" id="socialInstagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Liên kết</h5>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Trang chủ</a></li>
+                        <li><a href="#solutions">Giải pháp</a></li>
+                        <li><a href="#about">Về chúng tôi</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Giải pháp</h5>
+                    <ul class="footer-links">
+                        <li><a href="#solutions">Solar Energy</a></li>
+                        <li><a href="#solutions">Waste Management</a></li>
+                        <li><a href="#solutions">Smart Irrigation</a></li>
+                        <li><a href="#solutions">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Hỗ trợ</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#contact">Hỗ trợ kỹ thuật</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Green Tech Hub. All rights reserved. | Designed with 💚 for a greener planet.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
