@@ -91,6 +91,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const formError = document.getElementById('formError');
 
     /**
+     * Validate Vietnamese name (supports diacritical marks / ký tự tiếng Việt)
+     * @param {string} name - Name to validate
+     * @returns {boolean} - Whether name contains valid characters
+     */
+    function isValidVietnameseName(name) {
+        // Supports Vietnamese characters: àáảãạ, ăắằẳẵặ, âấầẩẫậ, etc.
+        var vietnameseRegex = /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềếểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵýỷỹ\s]+$/;
+        return vietnameseRegex.test(name);
+    }
+
+    /**
      * Validate email format
      * @param {string} email - Email address to validate
      * @returns {boolean} - Whether email is valid
@@ -150,6 +161,8 @@ document.addEventListener('DOMContentLoaded', function () {
             clearValidation(this);
         } else if (value.length < 2) {
             validateField(this, false, 'Họ và tên phải có ít nhất 2 ký tự');
+        } else if (!isValidVietnameseName(value)) {
+            validateField(this, false, 'Họ và tên chỉ được chứa chữ cái và khoảng trắng');
         } else {
             validateField(this, true);
         }
@@ -179,9 +192,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     inputMessage.addEventListener('input', function () {
         var value = this.value.trim();
-        if (value.length === 0) {
+        var charCount = value.length;
+        var counterEl = document.getElementById('messageCharCount');
+        
+        // Update character counter
+        if (counterEl) {
+            counterEl.textContent = charCount + ' / 1000 ký tự';
+            counterEl.style.color = charCount > 900 ? '#ef4444' : charCount > 0 ? 'var(--primary-green)' : 'var(--text-muted)';
+        }
+        
+        if (charCount === 0) {
             clearValidation(this);
-        } else if (value.length < 10) {
+        } else if (charCount < 10) {
             validateField(this, false, 'Lời nhắn phải có ít nhất 10 ký tự');
         } else {
             validateField(this, true);
@@ -209,10 +231,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Validate all fields
         var isFormValid = true;
 
-        // Name validation
+        // Name validation (with Vietnamese character support)
         var nameValue = inputName.value.trim();
         if (nameValue.length < 2) {
             validateField(inputName, false, nameValue.length === 0 ? 'Vui lòng nhập họ và tên' : 'Họ và tên phải có ít nhất 2 ký tự');
+            isFormValid = false;
+        } else if (!isValidVietnameseName(nameValue)) {
+            validateField(inputName, false, 'Họ và tên chỉ được chứa chữ cái và khoảng trắng');
             isFormValid = false;
         } else {
             validateField(inputName, true);
@@ -256,19 +281,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Handle result
         if (isFormValid) {
-            // Show success message
-            formSuccess.classList.add('alert-success');
-            formSuccess.style.display = 'flex';
+            // Show loading state on button
+            var submitBtn = document.getElementById('btnSubmit');
+            var originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Đang gửi...';
+            submitBtn.disabled = true;
 
-            // Log form data (in real app, send to server)
-            console.log('=== Form Data Submitted ===');
-            console.log('Name:', nameValue);
-            console.log('Email:', emailValue);
-            console.log('Phone:', phoneValue || 'N/A');
-            console.log('Company:', document.getElementById('inputCompany').value.trim() || 'N/A');
-            console.log('Subject:', inputSubject.value);
-            console.log('Message:', messageValue);
-            console.log('===========================');
+            // Simulate sending (in real app, this would be an API call)
+            setTimeout(function () {
+                // Restore button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+
+                // Show success message
+                formSuccess.classList.add('alert-success');
+                formSuccess.style.display = 'flex';
+
+                // Log form data
+                console.log('=== Form Data Submitted ===');
+                console.log('Name:', nameValue);
+                console.log('Email:', emailValue);
+                console.log('Phone:', phoneValue || 'N/A');
+                console.log('Company:', document.getElementById('inputCompany').value.trim() || 'N/A');
+                console.log('Subject:', inputSubject.value);
+                console.log('Message:', messageValue);
+                console.log('===========================');
 
             // Reset form after 3 seconds
             setTimeout(function () {
@@ -284,6 +321,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     formSuccess.style.display = 'none';
                 }, 2000);
             }, 3000);
+
+            }, 1500); // End of setTimeout for loading simulation
 
         } else {
             // Show error message
